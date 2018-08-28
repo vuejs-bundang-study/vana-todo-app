@@ -1,32 +1,55 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <ShoppingList/>
-    <HelloWorld/>
-  </div>
+  <v-app>
+    <v-content>
+      <v-container fluid>
+        <v-layout>
+          <v-flex lg12 lg6 offset-lg3>
+            <v-card>
+              <v-card-media
+                src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
+                height="200px"
+              ></v-card-media>
+              <v-card-title primary-title>
+                <div>
+                  <h3 class="headline mb-0">{{ title }}</h3>
+                  <add-item-component :items="items"></add-item-component>
+                  <items-component :items="items"></items-component>
+                </div>
+              </v-card-title>
+              <v-card-actions>
+                <change-title-component v-model="title"></change-title-component>
+              </v-card-actions>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-import ShoppingList from './components/ShoppingList'
-
+import AddItemComponent from './components/AddItemComponent'
+import ChangeTitleComponent from './components/ChangeTitleComponent'
+import ItemsComponent from './components/ItemsComponent'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    ShoppingList
-  }
+    AddItemComponent,
+    ChangeTitleComponent,
+    ItemsComponent
+  },
+  data () {
+    return {
+      items : [
+        {text : '양배추 사기', checked: true},
+        {text : '쵸니랑 놀아주기', checked: false},
+      ]
+    }
+  },
+  props: ['title']
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
