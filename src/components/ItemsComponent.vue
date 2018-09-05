@@ -1,6 +1,10 @@
 <template>
   <div>
-    <item-component v-for="item in items" :item="item" :items="items">
+    <item-component 
+      v-for="item in items" 
+      :key="item.id" 
+      :item="item" 
+      :items="items">
     </item-component>
   </div>
 </template>

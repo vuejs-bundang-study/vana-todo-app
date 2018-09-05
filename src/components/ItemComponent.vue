@@ -3,7 +3,10 @@
     <div class="checkbox">
      <label>
         <input type="checkbox" v-model="item.checked"> {{ item.text }}
-        <remove-item-component :item="item" :items="items"></remove-item-component>
+        <remove-item-component 
+          :item="item" 
+          :items="items">
+        </remove-item-component>
       </label>
     </div>
   </li>

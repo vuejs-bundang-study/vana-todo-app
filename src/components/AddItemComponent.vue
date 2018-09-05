@@ -1,5 +1,10 @@
 <template>
-    <v-text-field @keyup.enter="addItem" v-model="newItem" placeholder="할 일 추가" label="To do" required></v-text-field>
+    <v-text-field 
+      @keyup.enter="addItem" 
+      v-model="newItem" 
+      placeholder="할 일 추가" 
+      label="To do">
+    </v-text-field>
 </template>
 
 <script>

@@ -1,16 +1,18 @@
 <template>
-  <v-text-field v-bind:title="title" v-on:input="onInput" label="제목을 바꾸고 싶다면?"></v-text-field>
+  <v-text-field 
+  v-on:input="onInput" 
+  label="제목을 바꾸고 싶다면?">
+  </v-text-field>
 </template>
 
 <script>
 
 export default {
   methods: {
-    onInput: function (event) {
-      this.$emit('input', event)
+    onInput: function (val) {
+      this.$emit('input', val)
     }
-  },
-  props: ['title']
+  }
 }
 </script>
 

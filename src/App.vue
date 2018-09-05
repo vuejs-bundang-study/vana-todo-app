@@ -12,12 +12,17 @@
               <v-card-title primary-title>
                 <div>
                   <h3 class="headline mb-0">{{ title }}</h3>
-                  <add-item-component :items="items"></add-item-component>
-                  <items-component :items="items"></items-component>
+                  <add-item-component 
+                  :items="items">
+                  </add-item-component>
+                  <items-component 
+                  :items="items">
+                  </items-component>
                 </div>
               </v-card-title>
               <v-card-actions>
-                <change-title-component v-model="title"></change-title-component>
+                <change-title-component @input="input" :title="title">
+                </change-title-component>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -41,13 +46,18 @@ export default {
   },
   data () {
     return {
+      title : '',
       items : [
         {text : '양배추 사기', checked: true},
         {text : '쵸니랑 놀아주기', checked: false},
       ]
     }
   },
-  props: ['title']
+  methods:{
+    input : function(val) {
+      this.title = val;
+    }
+  }
 }
 </script>
 

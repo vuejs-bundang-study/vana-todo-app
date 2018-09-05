@@ -1,5 +1,6 @@
 <template>
-   <v-btn flat color="orange" @click="removeItem" >delete</v-btn>
+   <v-btn flat color="orange" 
+    @click="removeItem">delete</v-btn>
 </template>
 
 <script>
