@@ -21,7 +21,9 @@
                 </div>
               </v-card-title>
               <v-card-actions>
-                <change-title-component @input="input" :title="title">
+                <change-title-component
+                  @input="input" 
+                  :title="title">
                 </change-title-component>
               </v-card-actions>
             </v-card>
