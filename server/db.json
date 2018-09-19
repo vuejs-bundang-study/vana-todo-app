@@ -1,0 +1,34 @@
+{
+  "todoLists": [
+    {
+      "title": "new",
+      "checked": false,
+      "color": "blue",
+      "id": 1
+    },
+    {
+      "title": "전시회가기",
+      "checked": true,
+      "color": "blue",
+      "id": 2
+    },
+    {
+      "title": "바나나",
+      "checked": false,
+      "color": "blue",
+      "id": 3
+    },
+    {
+      "title": "건강검진",
+      "checked": false,
+      "color": "blue",
+      "id": 4
+    },
+    {
+      "title": "저녁약속",
+      "checked": false,
+      "color": "blue",
+      "id": 5
+    }
+  ]
+}

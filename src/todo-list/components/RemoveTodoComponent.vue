@@ -4,10 +4,10 @@
   </v-btn>
 </template>
 <script>
-import {mapActions} from 'vuex'
+import { mapActions } from 'vuex';
 export default {
-  methods : mapActions(['removeTodo']),
-  props : ['todo']
-}
+  methods: mapActions(['removeTodo']),
+  props: ['todo']
+};
 </script>
 

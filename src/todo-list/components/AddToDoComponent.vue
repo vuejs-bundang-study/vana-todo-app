@@ -5,10 +5,11 @@
   </v-text-field>
 </template>
 <script>
-import { mapActions } from 'vuex'
+import { mapActions } from 'vuex';
 
 export default {
-  methods : mapActions(['addTodo'])
+  methods: mapActions(['addTodo']),
+  props: ['id']
 };
 </script>
 
